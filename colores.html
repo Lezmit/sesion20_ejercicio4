@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf=8">
+        <style type="text/css">
+            #post, #blog {
+                width: 45%;
+                height: 400px;
+                margin: 0 20px;
+                float: left;
+            }
+            #blog {
+                float: right;
+            }
+        </style>
+    </head>
+    <body onload="return ran_col()">
+        <div id="post">
+        </div>
+        <div id="blog">
+        </div>
+        <script type="text/javascript">
+            function ran_col() { //function name
+                var color = '#'; // hexadecimal starting symbol
+                var letters = ['000000','FF0000','00FF00','0000FF','FFFF00','00FFFF','FF00FF','C0C0C0']; //Set your colors here
+                color += letters[Math.floor(Math.random() * letters.length)];
+                document.getElementById('post').style.background = color; // Setting the random color on your div element.
+                document.getElementById('blog').style.background = color; // Setting the random color on your div element.
+            }
+        </script>
+    </body>
+</html>
